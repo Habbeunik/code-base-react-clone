@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 
 // css
 import 'semantic-ui-css/semantic.min.css';
+import './assets/font/style.css';
 import './styles/main.css';
 
 const App = () => (

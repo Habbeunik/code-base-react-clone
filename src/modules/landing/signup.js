@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import RegisterForm from '../../components/Form/register';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import RegisterForm from '../../components/Form/register';
 
 function Signup() {
   return (
@@ -18,28 +19,21 @@ function Signup() {
         >
           Create Your Account
         </p>
-        <Grid stackable centered text>
-          <Grid.Column
-            width={7}
-            as='div'
-            className='page-card'
-            style={{ borderRadius: '5px', padding: '25px' }}
-          >
-            <RegisterForm />
-          </Grid.Column>
-        </Grid>
+        <RegisterForm />
         <Grid>
           <Grid.Column>
-            <p
-              style={{
-                color: '#fff',
-                textAlign: 'center',
-                fontSize: '16px',
-                marginBottom: '50px'
-              }}
-            >
-              Already have a Coinbase account? Log in
-            </p>
+            <Link to='/signup'>
+              <p
+                style={{
+                  color: '#fff',
+                  textAlign: 'center',
+                  fontSize: '16px',
+                  marginBottom: '50px'
+                }}
+              >
+                Already have a Coinbase account? Log in
+              </p>
+            </Link>
           </Grid.Column>
         </Grid>
       </Container>

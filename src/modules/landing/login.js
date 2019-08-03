@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
+import LoginForm from '../../components/Form/login';
+import { Link } from 'react-router-dom';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import LoginForm from '../../components/Form/login';
 
 function Login() {
   return (
@@ -18,28 +19,21 @@ function Login() {
         >
           Login
         </p>
-        <Grid stackable centered text>
-          <Grid.Column
-            width={7}
-            as='div'
-            className='page-card'
-            style={{ borderRadius: '5px', padding: '25px' }}
-          >
-            <LoginForm />
-          </Grid.Column>
-        </Grid>
+        <LoginForm />
         <Grid>
           <Grid.Column>
-            <p
-              style={{
-                color: '#fff',
-                textAlign: 'center',
-                fontSize: '16px',
-                marginBottom: '50px'
-              }}
-            >
-              Don't have an Account? Sign up
-            </p>
+            <Link to='/login'>
+              <p
+                style={{
+                  color: '#fff',
+                  textAlign: 'center',
+                  fontSize: '16px',
+                  marginBottom: '50px'
+                }}
+              >
+                Don't have an Account? Sign up
+              </p>
+            </Link>
           </Grid.Column>
         </Grid>
       </Container>

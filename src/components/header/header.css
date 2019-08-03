@@ -20,3 +20,12 @@
   color: white !important;
   box-shadow: 0 0 0 1px white inset !important;
 }
+
+button {
+  font-family: 'Century Gothic Regular' !important;
+}
+
+.header-button {
+  padding: '16px !important';
+  marginleft: '20px';
+}

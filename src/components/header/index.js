@@ -95,14 +95,16 @@ export class LandingHeader extends React.PureComponent {
                 </List.Item>
                 <List.Item as='div'>
                   <Button
-                    inverted={!isFixed}
                     as={Link}
                     to='/signup'
-                    size='huge'
-                    className='small-text'
+                    className='small-text header-button'
                     style={{
-                      padding: '16px !important',
+                      padding: '16px',
                       marginLeft: '20px',
+                      color: '#fff',
+                      background: '#1652f0',
+                      border: '1px solid #fff',
+                      fontFamily: 'Century Gothic Regular',
                       ...(isFixed && { background: '#05b169', color: '#fff' })
                     }}
                   >
