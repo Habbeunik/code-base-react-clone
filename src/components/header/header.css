@@ -1,0 +1,22 @@
+.header-box {
+  padding: 20px 0px;
+  background: #1652f0;
+}
+
+.header-box-fixed {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0px;
+  box-shadow: rgba(75, 86, 99, 0.094) 0px 8px 16px;
+  transition: all 300ms ease-out;
+}
+
+.secondary-button {
+  margin: 'none';
+  color: white !important;
+  box-shadow: 0 0 0 1px white inset !important;
+}

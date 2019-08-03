@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Index from './modules/landing';
+import { Helmet } from 'react-helmet';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// css
+import 'semantic-ui-css/semantic.min.css';
+import './styles/main.css';
+
+const App = () => (
+  <React.Fragment>
+    <Helmet>
+      <link
+        href='https://fonts.googleapis.com/css?family=Roboto&display=swap'
+        rel='stylesheet'
+      />
+    </Helmet>
+    <Switch>
+      <Index />
+    </Switch>
+  </React.Fragment>
+);
 
 export default App;

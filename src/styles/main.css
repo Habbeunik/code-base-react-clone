@@ -1,0 +1,147 @@
+body {
+  /* font-family: 'Century Gothic Regular'; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: 'Roboto', sans-serif !important; */
+}
+
+h1 {
+  font-size: 2.7rem !important;
+  /* line-height: 5.5rem !important; */
+}
+
+h2 {
+  font-size: 2.5rem !important;
+  /* line-height: 5.5rem !important; */
+}
+
+p,
+button,
+div,
+label,
+input {
+  /* font-family: 'Roboto', sans-serif !important; */
+}
+/* 
+p {
+  color: #838fa0 !important;
+} */
+
+.index-container {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.faintText {
+  color: #ffffff96 !important;
+  line-height: 3rem;
+}
+
+.page-card {
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  min-height: 70vh;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-card {
+    position: relative;
+    bottom: auto;
+  }
+}
+
+.input {
+  font-size: 16px !important;
+  padding: 24px !important;
+  border-radius: 5px !important;
+  border: 1px solid #f2f2f2 !important;
+  width: 100% !important;
+  transition: all 300ms ease-out;
+}
+
+.input:focus {
+  border: 1px solid #1652f0 !important;
+}
+
+.input-focus::placeholder {
+  color: #1652f0 !important;
+}
+
+.big-button {
+  font-size: 14px !important;
+  padding: 25px !important;
+  border-radius: 3px !important;
+  background-color: #05b169 !important;
+  color: #fff !important;
+}
+
+.small-text {
+  font-size: 14px !important;
+}
+
+.bold-text {
+  font-family: 'Century Gothic Bold' !important;
+}
+
+.primary-background {
+  background: #1652f0 !important;
+}
+
+.white-text {
+  color: #ffffff !important;
+}
+
+.getStarted-segment {
+  background: #002f6b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 104px 0px;
+}
+
+.segmentContainer {
+  padding: 100px 0px;
+}
+
+.table tr {
+  padding: 10px 10px;
+  border-color: #f2f2f252 !important;
+}
+
+.table tr:hover {
+  background: #f2f2f252;
+  cursor: pointer;
+}
+
+.table th {
+  text-transform: uppercase !important;
+  opacity: 0.4;
+  font-size: 11px;
+  padding: 12px 25px !important;
+}
+
+.table td {
+  font-size: 18px;
+  padding: 25px !important;
+  border-color: #f2f2f2 !important;
+}
+
+.signup-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0px;
+  padding-bottom: 150px;
+}
+
+.seconday-button {
+  background: #1652f0 !important;
+}
