@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Header } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import LoginForm from '../../components/Form/login';

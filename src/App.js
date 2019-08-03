@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Index from './modules/landing';
 import { Helmet } from 'react-helmet';
 
@@ -15,9 +15,9 @@ const App = () => (
         rel='stylesheet'
       />
     </Helmet>
-    <Switch>
+    <BrowserRouter>
       <Index />
-    </Switch>
+    </BrowserRouter>
   </React.Fragment>
 );
 

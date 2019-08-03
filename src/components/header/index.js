@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Grid, Header, List, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import Headroom from 'react-headroom';
 
 import './header.css';
 
