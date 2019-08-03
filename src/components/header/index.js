@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Header, List, Button } from 'semantic-ui-react';
+import { Container, Grid, Header, List, Button, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import './header.css';
@@ -11,11 +11,14 @@ export class LandingHeader extends React.PureComponent {
 
   componentDidMount() {
     window.addEventListener('scroll', () => {
-      console.log('scroll position', window.scrollY);
       if (window.scrollY > 120) this.fixHeader();
       else this.unFixHeader();
     });
   }
+
+  // componentWillUnmount() {
+  //   window.removeEventListener('scroll');
+  // }
 
   fixHeader = () => this.setState({ isFixed: true });
 
@@ -24,7 +27,25 @@ export class LandingHeader extends React.PureComponent {
   render() {
     const { isFixed } = this.state;
     const textColor = isFixed ? '#333' : '#fff';
-
+    const getButton = style => (
+      <Button
+        as={Link}
+        to='/signup'
+        className='small-text header-button'
+        style={{
+          padding: '16px',
+          marginLeft: '20px',
+          color: '#fff',
+          background: '#1652f0',
+          border: '1px solid #fff',
+          fontFamily: 'Century Gothic Regular',
+          ...style,
+          ...(isFixed && { background: '#05b169', color: '#fff' })
+        }}
+      >
+        Get Started
+      </Button>
+    );
     return (
       <div className={isFixed ? 'header-box-fixed' : 'header-box'}>
         <Container>
@@ -32,9 +53,10 @@ export class LandingHeader extends React.PureComponent {
             <Grid.Column
               width={4}
               style={{ display: 'flex', alignItems: 'center' }}
+              floated='left'
             >
               <Link to='/'>
-                <Header as='h2' style={{ color: isFixed ? '#1652f0' : '#fff' }}>
+                <Header as='h3' style={{ color: isFixed ? '#1652f0' : '#fff' }}>
                   coinbase
                 </Header>
               </Link>
@@ -47,6 +69,7 @@ export class LandingHeader extends React.PureComponent {
                 justifyContent: 'center',
                 alignItems: 'center'
               }}
+              only='computer'
             >
               <List horizontal>
                 <List.Item
@@ -76,7 +99,8 @@ export class LandingHeader extends React.PureComponent {
               width={4}
               as='div'
               style={{ display: 'flex', justifyContent: 'flex-end' }}
-              floated='left'
+              floated='right'
+              only='computer'
             >
               <List
                 horizontal
@@ -93,25 +117,27 @@ export class LandingHeader extends React.PureComponent {
                 >
                   Sign in
                 </List.Item>
-                <List.Item as='div'>
-                  <Button
-                    as={Link}
-                    to='/signup'
-                    className='small-text header-button'
-                    style={{
-                      padding: '16px',
-                      marginLeft: '20px',
-                      color: '#fff',
-                      background: '#1652f0',
-                      border: '1px solid #fff',
-                      fontFamily: 'Century Gothic Regular',
-                      ...(isFixed && { background: '#05b169', color: '#fff' })
-                    }}
-                  >
-                    Get Started
-                  </Button>
-                </List.Item>
+                <List.Item as='div'>{getButton()}</List.Item>
               </List>
+            </Grid.Column>
+            <Grid.Column
+              width={10}
+              as='div'
+              style={{ display: 'flex', justifyContent: 'flex-end' }}
+              floated='right'
+              only='mobile'
+            >
+              <div>
+                {getButton({ padding: '10px' })}
+                <Icon
+                  name='bars'
+                  size='large'
+                  style={{
+                    color: isFixed ? '#333' : '#fff',
+                    marginLeft: '20px'
+                  }}
+                />
+              </div>
             </Grid.Column>
           </Grid>
         </Container>

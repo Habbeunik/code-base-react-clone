@@ -61,7 +61,7 @@ function Service(props) {
 Service.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  image: PropTypes.element.isRequired
+  image: PropTypes.string.isRequired
 };
 
 export default function ServiceList() {

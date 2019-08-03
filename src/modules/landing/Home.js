@@ -64,7 +64,7 @@ function GetStartedSegment() {
               Get started with NGN 50 or less.
             </Header>
           </Grid.Column>
-          <Grid.Column width={7}>
+          <Grid.Column mobile={16} computer={7} tablet={11}>
             <GetStaredForm />
           </Grid.Column>
         </Grid>
@@ -80,7 +80,7 @@ function Home() {
         className='primary-background'
         style={{ paddingTop: '40px', paddingBottom: '200px' }}
       >
-        <Container text>
+        <Container>
           <Grid columns={1} stackable>
             <Grid.Column>
               <SegmentHead
@@ -93,7 +93,7 @@ function Home() {
             </Grid.Column>
           </Grid>
           <Grid centered>
-            <Grid.Column width={11}>
+            <Grid.Column mobile={16} computer={7} tablet={11}>
               <GetStaredForm />
             </Grid.Column>
           </Grid>
@@ -101,8 +101,11 @@ function Home() {
       </div>
       <div style={{ borderBottom: '1px solid #f2f2f2' }}>
         <Container className='segmentContainer' style={{ paddingTop: '0' }}>
-          <Grid columns={1}>
-            <Grid.Column style={{ marginTop: '-175px' }}>
+          <Grid>
+            <Grid.Column
+              width={16}
+              style={{ marginTop: '-175px', padding: '0', paddingTop: '20px' }}
+            >
               <CoinValueTable />
             </Grid.Column>
           </Grid>
@@ -116,7 +119,7 @@ function Home() {
               />
             </Grid.Column>
           </Grid.Row>
-          <Grid>
+          <Grid stackable>
             <Grid.Row style={{ marginTop: '50px' }}>
               <Grid.Column width={6}>
                 <ServiceList />
@@ -141,21 +144,21 @@ function Home() {
       </Container>
       <div className='primary-background' style={{ padding: '50px' }}>
         <Container>
-          <Grid columns={3} centered>
+          <Grid columns={3} centered stackable>
             <Grid.Column style={{ textAlign: 'center' }}>
               <h1
                 style={{
                   color: '#fff',
-                  margin: '0 !important',
+                  margin: '0',
                   fontSize: '56px !important',
                   lineHeight: '78px'
                 }}
               >
                 $150B+
               </h1>
-              <p style={{ color: '#fff', opacity: 0.6 }}>
+              <span style={{ color: '#fff', opacity: 0.6 }}>
                 Cryptocurrency exchanged
-              </p>
+              </span>
             </Grid.Column>
             <Grid.Column style={{ textAlign: 'center' }}>
               <h1

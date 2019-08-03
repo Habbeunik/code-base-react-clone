@@ -48,10 +48,11 @@ const socialListItem = [
 
 function FooterList(props) {
   const { heading, list } = props;
-  const listItems = list.map(item => (
+  const listItems = list.map((item, idx) => (
     <List.Item
       as='a'
       href={item.url}
+      key={idx.toString()}
       style={{
         fontSize: '15px',
         margin: '5px 0px',

@@ -22,7 +22,7 @@ function Login() {
         <LoginForm />
         <Grid>
           <Grid.Column>
-            <Link to='/login'>
+            <Link to='/signup'>
               <p
                 style={{
                   color: '#fff',

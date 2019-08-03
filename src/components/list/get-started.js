@@ -56,6 +56,7 @@ function Divider() {
         justifyContent: 'center',
         alignItems: 'center'
       }}
+      only='computer'
     >
       <div
         style={{
@@ -71,7 +72,7 @@ function Divider() {
 
 export default function StartProcessList() {
   return (
-    <Grid columns={5}>
+    <Grid columns={5} stackable>
       <StartProcess title='Create an account' image={StartProcess1Icon} />
       <Divider />
       <StartProcess title='Link your bank account' image={StartProcess2Icon} />

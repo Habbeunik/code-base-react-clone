@@ -62,7 +62,7 @@ Reason.propTypes = {
 
 export default function ReasonList() {
   return (
-    <Grid columns={3} style={{ paddingBottom: '50px' }}>
+    <Grid columns={3} style={{ paddingBottom: '50px' }} stackable>
       <Reason
         title='Manage your portfolio'
         body='Buy and sell popular digital currencies, keep track of them in the one place'

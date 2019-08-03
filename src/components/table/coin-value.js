@@ -42,7 +42,7 @@ const coinValues = [
 
 export default function CoinValueTable() {
   const tableBody = coinValues.map((coin, idx) => (
-    <Table.Row>
+    <Table.Row key={idx.toString()}>
       <Table.Cell style={{ color: '#ccc' }}>{idx + 1}</Table.Cell>
       <Table.Cell
         width={7}
@@ -85,8 +85,8 @@ export default function CoinValueTable() {
       <Table.Cell>
         <Button
           style={{
-            color: 'white !important',
-            background: '#05b169 !important'
+            color: 'white',
+            background: '#05b169'
           }}
         >
           Buy
